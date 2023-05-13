@@ -20,7 +20,7 @@ app.get("/data", (req, res) => {
 })
 
 app.get("/update/:distance", (req, res) => {
-    distance = parseInt(req.params.distance)
+    distance = parseFloat(req.params.distance)
     res.status(200).send("set distance to " + distance)
 })
 
