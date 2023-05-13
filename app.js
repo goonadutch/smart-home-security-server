@@ -15,6 +15,9 @@ app.get("/", (_, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"))
 })
 
+app.get("/data", (req, res) => {
+    res.status(200).send({distance})
+})
 
 app.get("/update/:distance", (req, res) => {
     distance = parseInt(req.params.distance)
